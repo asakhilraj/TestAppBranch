@@ -1,0 +1,41 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 24
+    buildToolsVersion '27.0.3'
+
+    defaultConfig {
+        applicationId "com.example.akhilraj.demo1"
+        minSdkVersion 19
+        targetSdkVersion 24
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'junit:junit:4.12'
+    implementation 'com.android.support:appcompat-v7:24.0.0'
+    implementation 'com.android.support:design:24.0.0'
+    implementation 'com.android.support:animated-vector-drawable:24.0.0'
+    // required
+    implementation 'io.branch.sdk.android:library:2.19.0'
+    // optional
+    implementation 'com.android.support:customtabs:24.0.0'
+    // Chrome Tab matching
+    implementation 'com.google.android.gms:play-services-ads:10.0.0'
+    // GAID matching
+    implementation 'com.google.firebase:firebase-appindexing:10.0.0'
+    // App indexing
+    implementation 'com.android.support:support-v4:24.0.0'
+    implementation 'com.android.support:recyclerview-v7:24.0.0'
+    //implementation 'com.google.android.gms:play-services-appindexing:8.1.0'
+}
